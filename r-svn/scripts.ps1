@@ -99,11 +99,12 @@ Function InstallMiktex {
 
   Write-Host "Installing CTAN packages"
   mpm --admin --set-repository=http://mirrors.rit.edu/CTAN/systems/win32/miktex/tm/packages/
-  mpm --admin --update
-  mpm --admin --install=fancyvrb
+  mpm --admin --verbose --update-db
+  mpm --admin --verbose --update
   mpm --admin --install=inconsolata
-  mpm --admin --install=epsf
-  mpm --admin --install=preprint
+  #mpm --admin --install=fancyvrb  
+  #mpm --admin --install=epsf
+  #mpm --admin --install=preprint
 
   # See https://tex.stackexchange.com/a/129523/12890
   # $conffile = "C:\Program Files\MiKTeX 2.9\miktex\config\updmap.cfg"

@@ -4,7 +4,7 @@
 # Git/SVN setup:
 # git svn clone git svn clone -T trunk https://svn.r-project.org/R
 # git checkout origin/trunk -b trunk
-# git remote add github https://github.com/r-windows/r-source
+# git remote add github https://github.com/r-devel/r-svn
 # git pull github master
 set -e
 set -x
