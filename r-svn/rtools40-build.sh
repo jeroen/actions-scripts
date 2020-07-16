@@ -11,7 +11,7 @@ set -x
 srcdir=$(dirname $(realpath $0))
 
 # Put pdflatex on the path (needed only for CMD check)
-export PATH="$PATH:/c/progra~1/git/bin:/c/progra~1/MiKTeX 2.9/miktex/bin/x64"
+export PATH="$PATH:/c/progra~1/git/bin:/c/progra~1/MiKTeX/miktex/bin/x64"
 echo "PATH: $PATH"
 pdflatex --version
 texindex --version
@@ -44,7 +44,7 @@ TEXINDEX=$(cygpath -m $(which texindex))
 cd "src/gnuwin32"
 sed -e "s|@win@|${WIN}|" -e "s|@texindex@|${TEXINDEX}|" -e "s|@home32@||" "${srcdir}/MkRules.local.in" > MkRules.local
 cat MkRules.local
-make all cairodevices recommended
+make all cairodevices recommended vignettes manuals
 
 # Optional: run checks
 make check-all
